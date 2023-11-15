@@ -1,0 +1,25 @@
+.top-bar {
+    display: flex;
+    justify-content: center;
+    grid-column: span 2;
+    gap: 1em;
+    padding: 1em;
+    font-size: clamp(0.7rem, 25% + 20px, 2rem);
+    background-color: #101010;
+    transition: 1s;
+    
+    .bars {
+        position: absolute;
+        top: 1em;
+        left: 1em;
+    }
+
+    img {
+        width: 100%;
+        max-width: 150px;
+        height: auto;
+    }
+}
+.blur {
+    filter: blur(2px);
+}

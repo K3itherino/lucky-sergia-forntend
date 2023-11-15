@@ -1,0 +1,167 @@
+.coin-flip {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    min-height: 100%;
+    gap: 1em;
+    transition: 1s;
+
+    .title {
+        font-size: clamp(1rem, 60% + 40px, 2.5rem);
+        color: white;
+    }
+
+    .coin-wrapper {
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 1em;
+        font-size: clamp(1rem, 60% + 40px, 2.5rem);
+
+        .state-message {
+            position: absolute;
+            top: 25%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 3;
+            padding: 0.5em;
+            border-radius: 0.2em;
+        }
+
+        .amount {
+            font-size: clamp(0.4rem, 20% + 20px, 1.5rem);
+            align-self: center;
+        }
+
+        .coin-container {
+            width: 100%;
+            grid-column: span 4;
+            max-height: 100%;
+            background-color: #1b1b1b;
+            border-radius: 0.1em;
+            padding: 1em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+
+            .coin-side {
+                justify-self: center;
+                font-size: clamp(0.4rem, 20% + 20px, 1.5rem);
+                color: #808000c7;
+
+            }
+    
+            .flipping-message {
+                animation: loading 1s infinite linear;
+                position: absolute;
+                font-size: clamp(1rem, 60% + 30px, 5rem);
+                font-weight: 400;
+                letter-spacing: 5px;
+                color: #4d4d4d;
+                left: 50%;
+                top: 50%;
+                transform: translateX(-50%) translateY(-50%);
+            }
+    
+            img {
+                width: 100%;
+                max-width: 400px;
+                height: auto;
+            }
+    
+            .hide {
+                opacity: 0;
+            }
+    
+            }
+
+    
+        &.blur {
+            filter: blur(2px)
+        }
+    }
+
+    .play-button {
+        padding: 1em;
+        border-radius: 0.2em;
+        font-size: clamp(0.6rem, 10% + 15px, 1.5rem);
+        width: 100%;
+        outline: none;
+        border: 0;
+        background-color: #808000c7;
+        cursor: pointer;
+        justify-content: center;
+        align-self: center;
+    }
+
+    .wait-message {
+        font-size: clamp(0.6rem, 10% + 15px, 1.5rem);
+        align-self: center;
+        justify-self: center;
+        grid-column: 2 / span 2;
+    }
+
+    .a {
+        grid-column:  2;
+    }
+
+    b {
+        grid-column: 3;
+    }
+    
+    .number-field {
+        grid-column: 1 / span 4;
+        border-radius: 0.1em;
+        justify-self: center;
+        display: flex;
+        align-items: center;
+        padding: 0.3em;
+        background-color: #1b1b1b;
+        color: white;
+        position: relative;
+        &.error {
+            outline: 1px solid red;
+        }
+
+        p {
+            position: absolute;
+            color: red;
+            top: -40%;
+            left: 0;
+            font-size: clamp(0.3rem, 10% + 10px, 0.8rem);
+        }
+
+        input {
+            font-size: clamp(0.7rem, 10% + 15px, 1.3rem);
+            display: flex;
+            justify-content: center;
+            background: #1b1b1b00;
+            outline: none;
+            border: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }    
+    .disabled {
+        opacity: 0.8;
+    }
+}
+
+@keyframes loading {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.blur {
+    filter:  blur(2px);
+    
+}

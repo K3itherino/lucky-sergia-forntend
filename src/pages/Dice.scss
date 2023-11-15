@@ -1,0 +1,8 @@
+.dice {
+    display: flex;
+    justify-content: center;
+
+    &.blur {
+        filter: blur(2px)
+    }
+}

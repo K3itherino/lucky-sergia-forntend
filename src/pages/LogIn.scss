@@ -1,0 +1,75 @@
+.login-page {
+    display: flex;
+    justify-content: center;
+
+    .message {
+        position: absolute;
+        top: 10%;
+        background-color: red;
+        padding: 1em;
+        border-radius: 0.2em;
+    }
+
+    @keyframes fadeaway {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+
+    .login-form {
+        display: grid;
+        
+        padding: 2em;
+        gap: 0.8em;
+        grid-template-columns: 1fr;
+        width: min(400px, 80%, 60vw);
+        background-color: #1b1b1b;
+        border-radius: 0.2em;
+
+        .button {
+            padding: 0.5em;
+            border-radius: 0.2em;
+            outline: none;
+            border: 0;
+            width: 100%;
+        }
+
+        .input-wrapper {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            border-radius: 0.2em;
+            background-color: #353535;
+            padding: 0.5em;
+            overflow: hidden;
+
+            .input {
+                outline: none;
+                border: 0;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0);
+                color: white;
+            }
+        }
+
+        .sign-up-text {
+            color: gray;
+            a {
+                color: rgb(177, 177, 177);
+            }
+        }
+        
+        .welcome {
+            justify-self: center;
+            font-weight: 200;
+            letter-spacing: 4px
+        }
+
+        .button {
+            background-color: #808000c7;
+        }
+    }
+}

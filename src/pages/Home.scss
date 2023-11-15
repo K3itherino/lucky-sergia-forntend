@@ -1,0 +1,17 @@
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #101010;
+    height: 100%;
+
+    h2 {
+        font-size: clamp(1rem, 20% + 30px, 2rem); 
+        color: #ffff00c7;
+    }
+    
+    &.blur {
+        filter: brightness(50%);
+        filter: blur(2px);
+    }
+}
